@@ -13,6 +13,7 @@ enum CharacterListViewState {
     
     case loading
     case done
+    case failure
     
 }
 

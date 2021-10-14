@@ -10,9 +10,11 @@ import Foundation
 class TutorialViewModel {
     
     private let tutorials: [GenericContainerData]
+    private let applicationInfoManager: ApplicationGeneralInfoProtocol
     
-    init(tutorials: [GenericContainerData]) {
+    init(tutorials: [GenericContainerData],applicationInfoManager : ApplicationGeneralInfoProtocol) {
         self.tutorials = tutorials
+        self.applicationInfoManager = applicationInfoManager
     }
     
     func getItem(at index: Int) -> GenericContainerData {
@@ -21,6 +23,10 @@ class TutorialViewModel {
     
     func getItemCount() -> Int {
         return tutorials.count
+    }
+    
+    func killMe() {
+        applicationInfoManager.setTutoralViewSeenForThisDevice()
     }
     
 }

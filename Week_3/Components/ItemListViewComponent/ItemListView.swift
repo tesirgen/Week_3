@@ -20,6 +20,7 @@ class ItemListView: BaseView {
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.delegate = self
         temp.dataSource = self
+        temp.estimatedRowHeight = UITableView.automaticDimension
         temp.register(ItemTableViewCell.self, forCellReuseIdentifier: ItemTableViewCell.identifier)
         return temp
     }()
@@ -43,7 +44,9 @@ class ItemListView: BaseView {
     }
     
     func reloadTableView() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
 }
@@ -68,7 +71,4 @@ extension ItemListView: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
-

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		916279B027136C0C009B5A54 /* CharacterListOperationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279AF27136C0C009B5A54 /* CharacterListOperationsProtocol.swift */; };
+		916279BD27136D66009B5A54 /* CharacterListOperationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279BC27136D66009B5A54 /* CharacterListOperationsManager.swift */; };
+		916279BF27136F1A009B5A54 /* ApplicationGeneralInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279BE27136F1A009B5A54 /* ApplicationGeneralInfoProtocol.swift */; };
+		916279C127136F48009B5A54 /* ApplicationGeneralInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279C027136F48009B5A54 /* ApplicationGeneralInfoManager.swift */; };
+		916279C3271371C5009B5A54 /* LabelDistributionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279C2271371C5009B5A54 /* LabelDistributionData.swift */; };
+		916279C627137946009B5A54 /* UserDefaultsWrapperHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279C527137946009B5A54 /* UserDefaultsWrapperHelper.swift */; };
+		916279C827137974009B5A54 /* TutorialViewInfoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279C727137974009B5A54 /* TutorialViewInfoStore.swift */; };
+		916279CA27137D1D009B5A54 /* CharacterListDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279C927137D1D009B5A54 /* CharacterListDataFormatter.swift */; };
+		916279CC27137D40009B5A54 /* CharacterListDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916279CB27137D40009B5A54 /* CharacterListDataFormatterProtocol.swift */; };
 		919092B027102F1F0037E764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919092AF27102F1F0037E764 /* AppDelegate.swift */; };
 		919092B227102F1F0037E764 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919092B127102F1F0037E764 /* SceneDelegate.swift */; };
 		919092B427102F1F0037E764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919092B327102F1F0037E764 /* ViewController.swift */; };
@@ -69,6 +78,7 @@
 		9190937927105B240037E764 /* MarvelCharactersApiServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190937627105B240037E764 /* MarvelCharactersApiServiceProvider.swift */; };
 		9190937A27105B240037E764 /* MarvelCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190937727105B240037E764 /* MarvelCharactersResponse.swift */; };
 		9190937B27105B240037E764 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190937827105B240037E764 /* BaseRequest.swift */; };
+		91EB5FC3271382820066B1D4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 91EB5FC2271382820066B1D4 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +99,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		916279AF27136C0C009B5A54 /* CharacterListOperationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsProtocol.swift; sourceTree = "<group>"; };
+		916279BC27136D66009B5A54 /* CharacterListOperationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsManager.swift; sourceTree = "<group>"; };
+		916279BE27136F1A009B5A54 /* ApplicationGeneralInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationGeneralInfoProtocol.swift; sourceTree = "<group>"; };
+		916279C027136F48009B5A54 /* ApplicationGeneralInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationGeneralInfoManager.swift; sourceTree = "<group>"; };
+		916279C2271371C5009B5A54 /* LabelDistributionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDistributionData.swift; sourceTree = "<group>"; };
+		916279C527137946009B5A54 /* UserDefaultsWrapperHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapperHelper.swift; sourceTree = "<group>"; };
+		916279C727137974009B5A54 /* TutorialViewInfoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewInfoStore.swift; sourceTree = "<group>"; };
+		916279C927137D1D009B5A54 /* CharacterListDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDataFormatter.swift; sourceTree = "<group>"; };
+		916279CB27137D40009B5A54 /* CharacterListDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDataFormatterProtocol.swift; sourceTree = "<group>"; };
 		919092AC27102F1F0037E764 /* Week_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919092AF27102F1F0037E764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919092B127102F1F0037E764 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EB5FC3271382820066B1D4 /* RxSwift in Frameworks */,
 				91909346271057600037E764 /* DefaultNetworkOperationPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +202,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		916279AD27136BC8009B5A54 /* UserDefaultsHelperManagers */ = {
+			isa = PBXGroup;
+			children = (
+				916279BE27136F1A009B5A54 /* ApplicationGeneralInfoProtocol.swift */,
+				916279C027136F48009B5A54 /* ApplicationGeneralInfoManager.swift */,
+			);
+			path = UserDefaultsHelperManagers;
+			sourceTree = "<group>";
+		};
+		916279AE27136BDE009B5A54 /* CharacterListOperationsManager */ = {
+			isa = PBXGroup;
+			children = (
+				916279AF27136C0C009B5A54 /* CharacterListOperationsProtocol.swift */,
+				916279BC27136D66009B5A54 /* CharacterListOperationsManager.swift */,
+			);
+			path = CharacterListOperationsManager;
+			sourceTree = "<group>";
+		};
+		916279C42713790D009B5A54 /* UserDefaultsHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				916279C527137946009B5A54 /* UserDefaultsWrapperHelper.swift */,
+				916279C727137974009B5A54 /* TutorialViewInfoStore.swift */,
+			);
+			path = UserDefaultsHelpers;
+			sourceTree = "<group>";
+		};
 		919092A327102F1F0037E764 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +324,7 @@
 		919092E227102FBB0037E764 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				916279C42713790D009B5A54 /* UserDefaultsHelpers */,
 				9190934F271058980037E764 /* FontManagers */,
 				9190934C271058430037E764 /* Extentions */,
 				91909347271057980037E764 /* AssetHelpers */,
@@ -288,10 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				9190936D27105AB60037E764 /* PageViewComponents */,
+				91909355271059BC0037E764 /* CustomImageViewComponent */,
 				9190936827105A6F0037E764 /* LabelPackComponents */,
 				9190936327105A1C0037E764 /* ItemListViewComponent */,
 				9190935E271059EA0037E764 /* ItemComponents */,
-				91909355271059BC0037E764 /* CustomImageViewComponent */,
 				91909352271059640037E764 /* SampleTest */,
 			);
 			path = Components;
@@ -300,6 +348,8 @@
 		919092E427102FE70037E764 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				916279AE27136BDE009B5A54 /* CharacterListOperationsManager */,
+				916279AD27136BC8009B5A54 /* UserDefaultsHelperManagers */,
 				9190937227105AEB0037E764 /* CacheManager */,
 			);
 			path = Manager;
@@ -349,6 +399,8 @@
 				9190930B27104AE30037E764 /* CharacterListViewModel.swift */,
 				9190930D27104B280037E764 /* CharacterListViewBuilder.swift */,
 				9190930F27104B580037E764 /* CharacterListViewController.swift */,
+				916279C927137D1D009B5A54 /* CharacterListDataFormatter.swift */,
+				916279CB27137D40009B5A54 /* CharacterListDataFormatterProtocol.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -423,10 +475,10 @@
 		91909355271059BC0037E764 /* CustomImageViewComponent */ = {
 			isa = PBXGroup;
 			children = (
-				91909359271059CC0037E764 /* CustomImageLoadingType.swift */,
-				91909357271059CC0037E764 /* CustomImageViewComponent.swift */,
 				91909358271059CC0037E764 /* CustomImageViewComponentContainer.swift */,
 				91909356271059CC0037E764 /* CustomImageViewComponentData.swift */,
+				91909357271059CC0037E764 /* CustomImageViewComponent.swift */,
+				91909359271059CC0037E764 /* CustomImageLoadingType.swift */,
 			);
 			path = CustomImageViewComponent;
 			sourceTree = "<group>";
@@ -454,6 +506,7 @@
 			children = (
 				9190936927105A840037E764 /* LabelPackComponent.swift */,
 				9190936A27105A840037E764 /* LabelPackComponentData.swift */,
+				916279C2271371C5009B5A54 /* LabelDistributionData.swift */,
 			);
 			path = LabelPackComponents;
 			sourceTree = "<group>";
@@ -503,6 +556,7 @@
 			name = Week_3;
 			packageProductDependencies = (
 				91909345271057600037E764 /* DefaultNetworkOperationPackage */,
+				91EB5FC2271382820066B1D4 /* RxSwift */,
 			);
 			productName = Week_3;
 			productReference = 919092AC27102F1F0037E764 /* Week_3.app */;
@@ -578,6 +632,7 @@
 			mainGroup = 919092A327102F1F0037E764;
 			packageReferences = (
 				91909344271057600037E764 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
+				91EB5FC1271382820066B1D4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 919092AD27102F1F0037E764 /* Products */;
 			projectDirPath = "";
@@ -622,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9190932C27104E2D0037E764 /* TestViewController.swift in Sources */,
+				916279C3271371C5009B5A54 /* LabelDistributionData.swift in Sources */,
 				919092FC271041260037E764 /* MainViewBuilder.swift in Sources */,
 				9190932027104D670037E764 /* PageViewDataProtocol.swift in Sources */,
 				9190937027105AC90037E764 /* PageViewComponent.swift in Sources */,
@@ -641,6 +697,7 @@
 				9190935C271059CC0037E764 /* CustomImageViewComponentContainer.swift in Sources */,
 				91909306271049340037E764 /* FavoriteViewBuilder.swift in Sources */,
 				9190931F27104D660037E764 /* GenericImageContainerViewModel.swift in Sources */,
+				916279CC27137D40009B5A54 /* CharacterListDataFormatterProtocol.swift in Sources */,
 				919092F1271033AB0037E764 /* GenericValueProtocol.swift in Sources */,
 				9190936727105A3E0037E764 /* ItemListView.swift in Sources */,
 				9190937A27105B240037E764 /* MarvelCharactersResponse.swift in Sources */,
@@ -649,12 +706,15 @@
 				91909349271057F10037E764 /* PageViewImages.swift in Sources */,
 				9190932727104DDA0037E764 /* ViewController3.swift in Sources */,
 				919092E9271032C00037E764 /* GenericDataProtocol.swift in Sources */,
+				916279BF27136F1A009B5A54 /* ApplicationGeneralInfoProtocol.swift in Sources */,
 				9190932A27104DDA0037E764 /* ViewController5.swift in Sources */,
 				9190937127105AC90037E764 /* PageViewComponentData.swift in Sources */,
 				9190931527104CB00037E764 /* TutorialViewController.swift in Sources */,
 				91909300271048470037E764 /* MainTabBarBuilder.swift in Sources */,
 				919092B427102F1F0037E764 /* ViewController.swift in Sources */,
 				9190931C27104D660037E764 /* GenericContainerData.swift in Sources */,
+				916279CA27137D1D009B5A54 /* CharacterListDataFormatter.swift in Sources */,
+				916279C627137946009B5A54 /* UserDefaultsWrapperHelper.swift in Sources */,
 				9190937427105AF60037E764 /* ImageCacheManager.swift in Sources */,
 				919092FA271040F50037E764 /* MainViewModel.swift in Sources */,
 				919093082710494D0037E764 /* FavoriteViewController.swift in Sources */,
@@ -663,6 +723,7 @@
 				9190936627105A3E0037E764 /* ItemListProtocol.swift in Sources */,
 				91909354271059820037E764 /* SampleTest.swift in Sources */,
 				919092EF271033710037E764 /* BaseViewController.swift in Sources */,
+				916279C127136F48009B5A54 /* ApplicationGeneralInfoManager.swift in Sources */,
 				9190932927104DDA0037E764 /* ViewController2.swift in Sources */,
 				9190931E27104D660037E764 /* GenericImageContainerViewBuilder.swift in Sources */,
 				9190930E27104B280037E764 /* CharacterListViewBuilder.swift in Sources */,
@@ -670,12 +731,15 @@
 				9190937927105B240037E764 /* MarvelCharactersApiServiceProvider.swift in Sources */,
 				91909361271059FB0037E764 /* ItemTableViewCell.swift in Sources */,
 				9190935D271059CC0037E764 /* CustomImageLoadingType.swift in Sources */,
+				916279BD27136D66009B5A54 /* CharacterListOperationsManager.swift in Sources */,
 				9190935A271059CC0037E764 /* CustomImageViewComponentData.swift in Sources */,
 				919092B027102F1F0037E764 /* AppDelegate.swift in Sources */,
 				919092B227102F1F0037E764 /* SceneDelegate.swift in Sources */,
 				9190931427104CB00037E764 /* TutorialViewBuilder.swift in Sources */,
+				916279C827137974009B5A54 /* TutorialViewInfoStore.swift in Sources */,
 				9190934B2710580D0037E764 /* TabBarImages.swift in Sources */,
 				91909362271059FB0037E764 /* ItemTableViewCellData.swift in Sources */,
+				916279B027136C0C009B5A54 /* CharacterListOperationsProtocol.swift in Sources */,
 				9190930C27104AE30037E764 /* CharacterListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1034,6 +1098,14 @@
 				kind = branch;
 			};
 		};
+		91EB5FC1271382820066B1D4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1041,6 +1113,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 91909344271057600037E764 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */;
 			productName = DefaultNetworkOperationPackage;
+		};
+		91EB5FC2271382820066B1D4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91EB5FC1271382820066B1D4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

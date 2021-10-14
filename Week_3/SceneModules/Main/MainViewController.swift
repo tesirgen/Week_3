@@ -18,31 +18,14 @@ class MainViewController: BaseViewController<MainViewModel> {
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.addTarget(self, action: .testButtonTapped, for: .touchUpInside)
         temp.setTitle("PUSH", for: .normal)
-        temp.tintColor = .cyan
         //temp.setTitleColor(.black, for: .normal)
         return temp
     }()
-    private func addImage(){
-        let imageName = "bjk.png"
-        guard let image = UIImage(named: imageName) else{ return }
-        let imageView = UIImageView(image: image)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(imageView)
-        
-        NSLayoutConstraint.activate([
-            
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-
-        
-    }
+    
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         
-        addImage()
+        view.backgroundColor = .green
         
         view.addSubview(test)
         

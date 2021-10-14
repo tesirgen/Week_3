@@ -32,6 +32,11 @@ class ItemTableViewCell: BaseTableViewCell {
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.heightAnchor.constraint(equalToConstant: 50).isActive = true
         temp.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        temp.layer.cornerRadius = 4
+        temp.layer.shadowColor = UIColor.black.cgColor
+        temp.layer.shadowOffset = CGSize(width: 0, height: 2)
+        temp.layer.shadowRadius = 4
+        temp.layer.shadowOpacity = 0.6
         return temp
     }()
     
@@ -77,5 +82,14 @@ class ItemTableViewCell: BaseTableViewCell {
         imageViewComponent.setData(componentData: data.imageData)
         cellInfo.setData(by: data.cellInfo)
     }
+    
+    private func getLabelPackComponentData() -> LabelPackComponentData {
+        return LabelPackComponentData()
+            .setSubTitleLabelDistributionData(by: LabelDistributionData().setContentMode(by: .left).setTextAlignment(by: .left).setNumberOfLines(by: 2).setLineBreakMode(by: .byTruncatingTail))
+            .setTitleLabelDistributionData(by: LabelDistributionData().setContentMode(by: .left).setTextAlignment(by: .left).setNumberOfLines(by: 1).setLineBreakMode(by: .byTruncatingTail))
+            .setSpacing(by: 5)
+            .setStackViewAlignment(by: .fill)
         
+    }
+    
 }

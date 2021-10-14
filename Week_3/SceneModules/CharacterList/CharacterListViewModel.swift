@@ -7,13 +7,27 @@
 
 import Foundation
 import DefaultNetworkOperationPackage
+import RxSwift
 
 class CharacterListViewModel {
     
+    deinit {
+        print("DEINIT CharacterListViewModel")
+    }
+    
+    private let disposeBag = DisposeBag()
+    
+    private let formatter: CharacterListDataFormatterProtocol
+    private let operationManager: CharacterListOperationsProtocol
+    
+    private var data: CharacterDataResponse?
     private var state: CharacterListStateBlock?
     
-    init() {
-        
+    init(formatter: CharacterListDataFormatterProtocol,
+         operationManager: CharacterListOperationsProtocol) {
+        self.formatter = formatter
+        self.operationManager = operationManager
+        subscribeOperationManagerPublisher()
     }
     
     func subscribeState(completion: @escaping CharacterListStateBlock) {
@@ -21,35 +35,29 @@ class CharacterListViewModel {
     }
     
     func getCharacterList() {
-        
         state?(.loading)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.fireApiCall { [weak self] result in
-                switch result {
-                case .success(let response):
-                    print("response: \(response)")
-                case .failure(let error):
-                    print("error : \(error)")
-                }
-                self?.state?(.done)
-            }
-        }
-        
+        operationManager.getCharacterListData()
     }
     
-    private func fireApiCall(with completion: @escaping (Result<CharacterDataResponse, ErrorResponse>) -> Void) {
-        
-        do {
-            let urlRequest = try MarvelCharactersApiServiceProvider().returnUrlRequest()
-            APIManager.shared.executeRequest(urlRequest: urlRequest, completion: completion)
-        } catch let error {
-            print("error : \(error)")
-        }
-        
+    private func dataHandler(with response: CharacterDataResponse) {
+        data = response
+        state?(.done)
     }
+    
+    private func subscribeOperationManagerPublisher() {
+        operationManager.subscribeDataPublisher { [weak self] result in
+            switch result {
+            case .failure(let error):
+                print("error : \(error)")
+            case .success(let response):
+                self?.dataHandler(with: response)
+            }
+        }.disposed(by: disposeBag)
+    }
+    
 }
 
+// MARK: - ItemListProtocol
 extension CharacterListViewModel: ItemListProtocol {
     
     func askNumberOfSection() -> Int {
@@ -57,12 +65,13 @@ extension CharacterListViewModel: ItemListProtocol {
     }
     
     func askNumberOfItem(in section: Int) -> Int {
-        return 0
+        guard let dataUnwrapped = data else { return 0 }
+        return dataUnwrapped.data.results.count
     }
     
     func askData(at index: Int) -> GenericDataProtocol? {
-        return nil
+        guard let dataUnwrapped = data else { return nil }
+        return formatter.getItem(from: dataUnwrapped.data.results[index])
     }
     
 }
-
